@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: sans-serif;
+    background: linear-gradient(to right, #ffe000, #799f0c);
+    width: 100%;
+    min-height: 100vh;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+input {
+    font-family: sans-serif;
+    outline: none;
+    border: none;
+
+    background-color: #fff;
+    color: #444;
+    font-size: 24px;
+    padding: 0px 20px;
+    width: 100%;
+}
+
+.wrapper {
+    width: 400px;
+    margin: 100px auto;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+#form_todo-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 10px 0px;
+    border-bottom: 1px solid #aaa;
+}
+
+.btn {
+    background-color: #9acd32;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 15px;
+    text-align: center;
+}
