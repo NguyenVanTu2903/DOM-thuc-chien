@@ -17,11 +17,11 @@ body {
 }
 
 .alert {
-    width: 100vw;
-    height: 100vh;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .alert p {
@@ -83,4 +83,8 @@ body {
 .card p {
     padding: 10px;
     font-size: 20px;
+}
+
+.hide {
+    display: none;
 }
