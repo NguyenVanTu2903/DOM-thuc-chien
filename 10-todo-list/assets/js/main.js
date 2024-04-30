@@ -14,7 +14,7 @@ function render() {
     const html = todoList
         .map(
             (todo) =>
-                `<li class="item">${todo} <button class="btnDelete">&times;</button></li>`
+                `<li class="item">${todo} <i class="fas fa-trash btnDelete"></i></li>`
         )
         .join("");
 

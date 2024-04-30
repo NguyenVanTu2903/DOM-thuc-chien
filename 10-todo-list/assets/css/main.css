@@ -43,12 +43,12 @@ li {
     align-items: center;
     justify-content: space-between;
 }
-.list button {
+.list i {
     color: #aaa;
     opacity: 0;
 }
 
-.item:hover button {
+.item:hover i {
     opacity: 1;
 }
 
