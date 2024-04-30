@@ -34,6 +34,24 @@ input {
     width: 100%;
 }
 
+li {
+    border-top: 1px solid #e5e5e5;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 15px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.list button {
+    color: #aaa;
+    opacity: 0;
+}
+
+.item:hover button {
+    opacity: 1;
+}
+
 .wrapper {
     width: 400px;
     margin: 100px auto;
