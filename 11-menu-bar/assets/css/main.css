@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+:root {
+    /* ========== Colors ==========*/
+    --black-color: rgb(23, 28, 38);
+    --black-color-light: rgb(29, 35, 47);
+    --black-color-lighten: rgb(37, 43, 55);
+    --white-color: #fff;
+    --body-color: rgb(240, 245, 255);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--body-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 2.4rem;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--black-color);
+    box-shadow: 0 2px 16px rgba(14, 18, 27, 0.3);
+    z-index: 100;
+}
+
+/* Nav */
+.nav {
+    height: 5.6rem;
+}
+
+.nav-logo,
+.nav-toggle,
+.nav-close {
+    color: var(--white-color);
+}
+
+.nav-data {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.4rem;
+    font-weight: 600;
+}
+
+.nav-logo i {
+    font-weight: initial;
+    font-size: 2rem;
+}
+
+.nav-toggle {
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+
+.nav-burger,
+.nav-close {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    inset: 0;
+    margin: auto;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: opacity 0.1s, transform 0.4s;
+}
+
+.nav-close {
+    opacity: 0;
+}
+
+/* reponsive mobile*/
+
+@media screen and (max-width: 63.9375em) {
+    .nav-menu {
+        position: absolute;
+        left: 0;
+        top: 4rem;
+        width: 100%;
+        background-color: gray;
+        height: calc(100vh - 5.6rem);
+        overflow: auto;
+        pointer-events: none;
+        opacity: 0;
+        transition: top 0.4s, opacity 0.3s;
+    }
+
+    .nav-list {
+        background-color: var(--black-color);
+        padding-top: 1.6rem;
+    }
+}
+
+.nav-link {
+    color: var(--white-color);
+    background-color: var(--black-color);
+    font-weight: 600;
+    padding: 2rem 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: var(--black-color-light);
+}
+
+.show-menu {
+    opacity: 1;
+    top: 5.6rem;
+    pointer-events: initial;
+}
+
+.show-icon .nav-burger {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+.show-icon .nav-close {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+/* Dropdown */
+.dropdown-item {
+    cursor: pointer;
+}
+
+.dropdown-arrow {
+    font-size: 2rem;
+    font-weight: initial;
+    transition: transform 0.4s;
+}
+
+.dropdown-link,
+.dropdown-sublink {
+    padding: 2rem 2rem 2rem 4rem;
+    color: var(--white-color);
+    background-color: var(--black-color-light);
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.dropdown-link i,
+.dropdown-sublink i {
+    font-size: 2rem;
+    font-weight: initial;
+}
+
+.dropdown-link:hover,
+.dropdown-sublink:hover {
+    background-color: var(--black-color);
+}
+
+.dropdown-menu,
+.dropdown-submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.dropdown-item:hover .dropdown-menu,
+.dropdown-subitem:hover .dropdown-submenu {
+    max-height: 1000px;
+    transition: max-height 0.4s ease-in;
+}
+
+.dropdown-item:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Submenu */
+.dropdown-add {
+    margin-left: auto;
+}
+
+.dropdown-sublink {
+    background-color: var(--black-color-lighten);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 46.1875em) {
+    .container {
+        margin-inline: 1.6rem;
+    }
+
+    .nav-link {
+        padding-inline: 1.6rem;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 64em) {
+    .container {
+        margin-inline: auto;
+    }
+
+    .nav {
+        height: 8.8rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .nav-list {
+        height: 100%;
+        display: flex;
+        column-gap: 4.8rem;
+    }
+    .nav-link {
+        height: 100%;
+        padding: 0;
+        justify-content: initial;
+        column-gap: 0.4rem;
+    }
+    .nav-link:hover {
+        background-color: transparent;
+    }
+
+    .dropdown-item,
+    .dropdown-subitem {
+        position: relative;
+    }
+
+    .dropdown-menu,
+    .dropdown-submenu {
+        max-height: initial;
+        overflow: initial;
+        position: absolute;
+        left: 0;
+        top: 9.6rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s, top 0.3s;
+    }
+
+    .dropdown-link,
+    .dropdown-sublink {
+        padding-inline: 1.6rem 5.6rem;
+    }
+
+    .dropdown-subitem .dropdown-link {
+        padding-inline: 1.6rem;
+    }
+
+    .dropdown-submenu {
+        position: absolute;
+        left: 100%;
+        top: 0.8rem;
+    }
+    /* Show dropdown menu */
+    .dropdown-item:hover .dropdown-menu {
+        opacity: 1;
+        top: 8.8rem;
+        pointer-events: initial;
+        transition: top 0.3s;
+    }
+
+    /* Show dropdown submenu */
+    .dropdown-subitem:hover > .dropdown-submenu {
+        opacity: 1;
+        top: 0;
+        pointer-events: initial;
+        transition: top 0.3s;
+    }
+}
+
+/* :root {
+  --header-height: 3.5rem; */
+
+/* ========== Colors ==========*/
+/*Color mode HSL(hue, saturation, lightness) */
+/* --black-color: hsl(220, 24%, 12%);
+  --black-color-light: hsl(220, 24%, 15%);
+  --black-color-lighten: hsl(220, 20%, 18%);
+  --white-color: #fff;
+  --body-color: hsl(220, 100%, 97%); */
+
+/*========== Font and typography ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+/* --body-font: "Montserrat", sans-serif;
+  --normal-font-size: .938rem; */
+
+/*========== Font weight ==========*/
+/* --font-regular: 400;
+  --font-semi-bold: 600; */
+
+/*========== z index ==========*/
+/* --z-tooltip: 10;
+  --z-fixed: 100;
+} */
