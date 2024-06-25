@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Name product white-black",
+        "price": 205600,
+        "quantity": 0,
+        "image": "./assets/image/product1.jpg",
+        "nature": {
+            "color": ["white", "black"],
+            "size": ["S", "M", "L"],
+            "type": "T-shirt"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Name product white-black-grey",
+        "price": 300000,
+        "quantiy": 30,
+        "image": "./assets/image/product2.jpg",
+        "nature": {
+            "color": ["white", "black", "grey"],
+            "size": ["S", "M", "L"],
+            "type": "Polo"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Name product black",
+        "price": 200000,
+        "quantiy": 30,
+        "image": "./assets/image/product3.jpg",
+        "nature": {
+            "color": ["black"],
+            "size": ["S", "M", "L"],
+            "type": "T-shirt"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Name product blue-black",
+        "price": 400000,
+        "quantiy": 30,
+        "image": "./assets/image/product4.jpg",
+        "nature": {
+            "color": ["black", "blue"],
+            "size": ["S", "M", "L"],
+            "type": "T-shirt"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Name product brown",
+        "price": 320000,
+        "quantiy": 30,
+        "image": "./assets/image/product5.jpg",
+        "nature": {
+            "color": ["brown"],
+            "size": ["S", "M", "L"],
+            "type": "Polo"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Name product white-black",
+        "price": 100000,
+        "quantiy": 30,
+        "image": "./assets/image/product6.jpg",
+        "nature": {
+            "color": ["white", "black"],
+            "size": ["S", "M", "L"],
+            "type": "Shirt"
+        }
+    }
+]

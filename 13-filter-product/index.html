@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Filter Product</title>
+
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+
+        <script src="./assets/js/main.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <form class="filter">
+                <div class="item">
+                    <label>Category</label>
+                    <select name="category" id="category">
+                        <option value="">...</option>
+                        <option value="T-shirt">T-shirt</option>
+                        <option value="Shirt">Shirt</option>
+                        <option value="Polo">Polo</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <label>Color</label>
+                    <select name="color" id="color">
+                        <option value="">...</option>
+                        <option value="white">white</option>
+                        <option value="black">black</option>
+                        <option value="grey">grey</option>
+                        <option value="blue">blue</option>
+                        <option value="brown">brown</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <label>Name</label>
+                    <input id="name" name="name" type="text" />
+                </div>
+                <div class="item">
+                    <label>Min Price</label>
+                    <input id="minPrice" name="minPrice" type="number" />
+                </div>
+                <div class="item">
+                    <label>Max Price</label>
+                    <input id="maxPrice" name="maxPrice" type="number" />
+                </div>
+                <div class="item submit">
+                    <button>Search</button>
+                </div>
+            </form>
+
+            <div class="countResults">Found <b class="count">5</b> results</div>
+
+            <div class="list">
+                <div class="item">
+                    <div class="cover">
+                        <img src="./assets/image/product1.jpg" alt="" />
+                    </div>
+                    <div class="title">Name Product 1</div>
+                    <div class="price">200000 đ</div>
+                </div>
+                <div class="item">
+                    <div class="cover">
+                        <img src="./assets/image/product2.jpg" alt="" />
+                    </div>
+                    <div class="title">Name Product 2</div>
+                    <div class="price">5200000 đ</div>
+                </div>
+                <div class="item">
+                    <div class="cover">
+                        <img src="./assets/image/product3.jpg" alt="" />
+                    </div>
+                    <div class="title">Name Product 3</div>
+                    <div class="price">100000 đ</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
